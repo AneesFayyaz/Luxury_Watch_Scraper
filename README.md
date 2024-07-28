@@ -1,37 +1,62 @@
-## Luxury Watch Scraper
-This repository contains a Python script for scraping detailed information about luxury watches from a specific website. The script uses BeautifulSoup for HTML parsing and requests for handling HTTP requests. It extracts various details such as images, product names, brand names, SKU, movement, functions, box, bracelet, remarks, price, and product URLs. The collected data is then saved into an Excel file.
+# WatchScraper
 
-## Prerequisites
-Before running the script, ensure you have the following installed:
+WatchScraper is a web scraping project that extracts detailed information about watch products from the "Le Guide des Montres" website and saves the data into an Excel file. This project uses BeautifulSoup and requests to scrape data and pandas to handle data storage.
 
-*Python 3.x
-*BeautifulSoup
-*requests
-*pandas
+## Features
 
-## Script
+- Scrapes watch product details such as images, SKU, brand name, product name, movement, functions, box, bracelet, remarks, and price.
+- Stores the extracted data in an Excel file for easy access and analysis.
 
-This script scrapes detailed information about luxury watches from the specified website.
+## Requirements
 
-## Functionality:
+- Python 3.x
+- BeautifulSoup4
+- requests
+- pandas
+- openpyxl
 
-*Scrapes the links to all available brands.
-*Scrapes the links to all products from each brand.
-*Extracts detailed information about each product.
-*Saves the extracted data into an Excel file.
+## Installation
 
-## Output
+1. Clone this repository:
 
-The script outputs an Excel file named output1.xlsx with the following columns:
+    ```bash
+    git clone https://github.com/yourusername/WatchScraper.git
+    ```
 
-*Image Urls: URLs of product images.
-*SKU: SKU number of the product.
-*Brand Name: Name of the brand.
-*Product Name: Name of the product.
-*Mouvement: Movement type of the watch.
-*Functions: Functions of the watch.
-*Box: Box details.
-*Bracelet: Bracelet details.
-*Remarks: Additional remarks.
-*Price: Price of the product.
-*Product Url: URL of the product page.
+2. Navigate to the project directory:
+
+    ```bash
+    cd WatchScraper
+    ```
+
+3. Install the required packages:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+1. Run the main script to start the scraping process:
+
+    ```bash
+    python main.py
+    ```
+
+2. The script will scrape the data and save it to an Excel file named `output1.xlsx` in the project directory.
+
+## Code Overview
+
+### main.py
+
+This script contains three main functions:
+
+1. `brands_links()`: Scrapes the brand links from the main product page.
+2. `products_links(brandsLink)`: Scrapes the product links from each brand page.
+3. `Product_details(links)`: Scrapes the detailed product information from each product page and saves it to an Excel file.
+
+## Acknowledgements
+- The BeautifulSoup library for parsing HTML and XML documents.
+- The requests library for making HTTP requests.
+- The pandas library for data manipulation and analysis.
+- The openpyxl library for working with Excel files in Python.
