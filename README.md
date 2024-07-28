@@ -3,6 +3,7 @@ This repository contains a Python script for scraping detailed information about
 
 **Prerequisites**
 Before running the script, ensure you have the following installed:
+
 Python 3.x
 BeautifulSoup
 requests
